@@ -1,0 +1,1 @@
+# GoldCoast-Stock-Trend-Predictor
