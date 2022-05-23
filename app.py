@@ -51,7 +51,7 @@ if selected == "Home":
     So financial analysts, researchers and data scientists keep exploring analytics 
     techniques to detect stock market trends. ''')
 
-    lottie_coading = load_lottiefile("app-lottie\home.json")
+    lottie_coading = load_lottiefile("app-lottie/home.json")
     st_lottie(
         lottie_coading,
         speed = 1,
@@ -157,7 +157,7 @@ if selected == "Project":
             plt.legend()
             st.pyplot(fig2)
 
-            lottie_coading = load_lottiefile("app-lottie\thanks.json")
+            lottie_coading = load_lottiefile("app-lottie/thanks.json")
             st_lottie(
                 lottie_coading,
                 speed=3,
@@ -169,7 +169,7 @@ if selected == "Project":
                 key=None,
             )
     else:
-            lottie_coading = load_lottiefile("app-lottie\error.json")
+            lottie_coading = load_lottiefile("app-lottie/error.json")
             st_lottie(
                 lottie_coading,
                 speed=1,
@@ -186,7 +186,7 @@ if selected == "Project":
 if selected == "FAQ":
     st.title(f"Frequently Asked Questions(FAQ)")
 
-    lottie_coading = load_lottiefile("app-lottie\faq.json")
+    lottie_coading = load_lottiefile("app-lottie/faq.json")
     st_lottie(
         lottie_coading,
         speed=1,
