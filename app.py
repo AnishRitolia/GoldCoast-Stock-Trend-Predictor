@@ -10,7 +10,7 @@ import json
 from streamlit_lottie import st_lottie
 
 #Changing App Name and Icon
-img = Image.open(r"\img\icon.png")
+img = Image.open("img/icon.png")
 st.set_page_config(page_title="GoldCoast Stock Trend Predictor",page_icon=img)
 
 #Removing header and Footer of the Web-App
@@ -51,7 +51,7 @@ if selected == "Home":
     So financial analysts, researchers and data scientists keep exploring analytics 
     techniques to detect stock market trends. ''')
 
-    lottie_coading = load_lottiefile(r"\app-lottie\home.json")
+    lottie_coading = load_lottiefile("app-lottie\home.json")
     st_lottie(
         lottie_coading,
         speed = 1,
@@ -125,7 +125,7 @@ if selected == "Project":
 
             #Load my model
             from keras.models import load_model
-            model = load_model(r"\keras_model.h5")
+            model = load_model("keras_model.h5")
 
             #Testing Part
             past_100_days = data_training.tail(100)
@@ -157,7 +157,7 @@ if selected == "Project":
             plt.legend()
             st.pyplot(fig2)
 
-            lottie_coading = load_lottiefile(r"\app-lottie\thanks.json")
+            lottie_coading = load_lottiefile("app-lottie\thanks.json")
             st_lottie(
                 lottie_coading,
                 speed=3,
@@ -169,7 +169,7 @@ if selected == "Project":
                 key=None,
             )
     else:
-            lottie_coading = load_lottiefile(r"\app-lottie\error.json")
+            lottie_coading = load_lottiefile("app-lottie\error.json")
             st_lottie(
                 lottie_coading,
                 speed=1,
@@ -186,7 +186,7 @@ if selected == "Project":
 if selected == "FAQ":
     st.title(f"Frequently Asked Questions(FAQ)")
 
-    lottie_coading = load_lottiefile(r"\app-lottie\faq.json")
+    lottie_coading = load_lottiefile("app-lottie\faq.json")
     st_lottie(
         lottie_coading,
         speed=1,
@@ -244,7 +244,7 @@ if selected == "Contact":
 
     st.markdown(contact, unsafe_allow_html=True)
 
-    lottie_coading = load_lottiefile(r"\app-lottie\contact.json")
+    lottie_coading = load_lottiefile("app-lottie/contact.json")
     st_lottie(
         lottie_coading,
         speed=0.9,
@@ -261,4 +261,4 @@ if selected == "Contact":
         with open(file_name) as f:
             st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-    local_css(r"\style\style.css")
+    local_css("style/style.css")
