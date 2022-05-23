@@ -6,7 +6,7 @@ streamlit==1.9.0
 streamlit-lottie==0.0.3
 streamlit-option-menu==0.3.2
 keras==2.9.0
-
+scikit-learn==1.0.2
 
 
 
